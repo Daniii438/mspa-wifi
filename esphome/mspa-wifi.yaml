@@ -53,7 +53,11 @@ web_server:
 #    password: "${device_password}"
 
 external_components:
-  - source: components
+  - source:
+      type: git
+      url: https://github.com/johannesc/mspa-wifi
+      ref: refs/heads/main
+      path: esphome/components
     components: [ mspa_wifi ]
 
 uart:
